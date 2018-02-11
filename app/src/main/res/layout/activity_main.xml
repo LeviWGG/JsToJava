@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="app.main.wangliwei.jstojava.MainActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/text_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/text_java_js"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_below="@+id/text_show"
+            android:background="@drawable/buttom_bg"
+            android:text="loadUrl"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/text_java_evaJs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/text_java_js"
+            android:layout_below="@+id/text_show"
+            android:background="@drawable/buttom_bg"
+            android:text="evaluateJavascript"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </FrameLayout>
+
+</LinearLayout>

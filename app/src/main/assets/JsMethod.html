@@ -1,0 +1,38 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" charset="UTF-8"/>
+
+        <script type="text/javascript">
+            var s = '我来自Js方法';
+            function javatojscallback(param){
+                 document.getElementById("textshow").innerHTML = (param);
+                 window.android.JsToJavaInterface(s)
+            }
+
+            function javatojswith(param){
+                 document.getElementById("textshow").innerHTML = (param);
+                 return s;
+            }
+
+            function jstojavaprompt(param){
+                 result = prompt(param);
+                 document.getElementById("textshow").innerHTML = (result);
+            }
+        </script>
+    </head>
+
+    <body>
+
+        <h3>Js Method</h3>
+        <h3 id="textshow">调用结果</h3>
+
+        <input type="button" value="JavascriptInterface" onclick="window.android.JsToJavaInterface('我来自Js')"/>
+
+        <input type="button" value="shouldOverrideUrlLoading" onclick="document.location = 'js://jstojava?arg1=1号参数&arg2=2号参数'"/>
+
+        <input type="button" value="onJsPrompt" onclick="jstojavaprompt('js://jstojava?arg3=3号参数&arg4=4号参数')"/>
+
+    </body>
+
+</html>
